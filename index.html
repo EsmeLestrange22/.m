@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title> Menu </title>
+</head>
+
+<body>
+    <h2> Menu </h2>
+    <br>
+    <div id="lis">
+
+    </div>
+    <button id="s" onclick="SH()"> Show Menu </button>
+    <br> <br> <br>
+    <button id="h" onclick="HI()"> Hide Menu </button>
+
+    <br> <br>
+    <span> <input placeholder="Type a dish here" id="iput"> </span>
+    <span> <button id="a" onclick="AD()"> Add to menu </button> </span>
+    <style>
+        body {
+            background: linear-gradient(yellow, green);
+            font-family: cursive;
+            text-align: center;
+        }
+
+        button {
+            background-color: black;
+            color: floralwhite;
+            font-family: cursive;
+            border-radius: 20px;
+        }
+
+        input {
+            background-color: black;
+            color: floralwhite;
+            font-family: cursive;
+            border-radius: 20px;
+        }
+
+        #lis {
+            
+            font-family: cursive;
+        }
+    </style>
+    <script>
+        var dish = ["Veg Lasagna", "Mini Chicken Burger", "French Fries", "Cheese Pizza", "Chicken lolipop","Chilli Chicken"];
+        var new101 = "";
+
+        function SH() {
+
+            document.getElementById("lis").innerHTML = dish;
+        }
+
+        function HI() {
+            document.getElementById("lis").style.display = "none";
+        }
+        function AD() {
+            new101 =
+            document.getElementById("iput").value;
+
+            dish.push(new101);
+
+            dish.sort();
+
+            document.getElementById("lis").innerHTML= dish;
+
+        }
+    </script>
+
+
+</body>
+
+</html>
